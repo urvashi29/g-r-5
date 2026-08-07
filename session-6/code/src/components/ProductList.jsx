@@ -1,7 +1,7 @@
 import React from "react";
 
 const ProductItem = ({ product, onAdd }) => {
-  console.log("Render");
+  // console.log("Render");
   
   return (
     <div style={{ marginBottom: "10px" }}>
