@@ -1,0 +1,201 @@
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #172033;
+  background: #eef3f9;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  border: 0;
+  border-radius: 9px;
+  padding: 10px 16px;
+  color: white;
+  background: #2563eb;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button.secondary {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.app-shell {
+  width: min(940px, calc(100% - 32px));
+  margin: 36px auto;
+}
+
+.app-header,
+.dashboard-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.app-header {
+  margin-bottom: 22px;
+}
+
+.app-header h1,
+.page-card h2 {
+  margin: 4px 0;
+}
+
+.subtitle,
+.page-card p {
+  color: #57647a;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+  padding: 5px;
+  border-radius: 12px;
+  background: white;
+}
+
+nav button {
+  color: #57647a;
+  background: transparent;
+}
+
+nav button:hover,
+nav button.nav-active {
+  color: white;
+  background: #172033;
+}
+
+.page-card {
+  padding: 28px;
+  border: 1px solid #dfe6ef;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 16px 45px rgb(30 55 90 / 8%);
+}
+
+.status-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 22px 0;
+  padding: 13px 16px;
+  border-radius: 10px;
+}
+
+.status-banner.warning {
+  color: #854d0e;
+  background: #fef9c3;
+}
+
+.control-grid,
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.control-card,
+.concept-grid article {
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  background: #f8fafc;
+}
+
+.control-card > span {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.control-card h3 {
+  min-height: 29px;
+  margin: 8px 0 16px;
+}
+
+.control-card small {
+  display: block;
+  margin-top: 12px;
+  color: #64748b;
+}
+
+.student-card {
+  margin-top: 18px;
+  padding: 20px;
+  border: 2px solid #bfdbfe;
+  border-radius: 13px;
+  background: #eff6ff;
+}
+
+.student-card h3 {
+  margin: 5px 0 16px;
+}
+
+.student-card ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.student-card li {
+  padding: 9px 12px;
+  border-radius: 7px;
+  background: white;
+}
+
+.teacher-prompt {
+  margin-top: 18px;
+  padding: 16px;
+  border-left: 4px solid #7c3aed;
+  background: #f5f3ff;
+}
+
+.teacher-prompt p {
+  margin: 5px 0 0;
+}
+
+@media (max-width: 700px) {
+  .app-header,
+  .dashboard-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .control-grid,
+  .concept-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-card ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
